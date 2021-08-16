@@ -5,15 +5,15 @@ import { graphql, Link, useStaticQuery } from 'gatsby'
 export default function Navbar() {
     const data = useStaticQuery(graphql`
         {
-        site {
-            siteMetadata {
-            title
+            site {
+                siteMetadata {
+                    title
+                }
             }
         }
-        }
-    `)
+    `);
     
-    const { title } = data.site.siteMetadata
+    const { title } = data.site.siteMetadata;
 
     return (
         <nav>
